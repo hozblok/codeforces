@@ -1,8 +1,12 @@
+from decimal import Decimal
+
+
 tc = int(input())
 
 for _ in range(tc):
     a, b, c, d = list(map(int, input().split()))
-    if a/b == c/d:
+    # print(a/b, c/d)
+    if Decimal(a)/b == Decimal(c)/d:
         print(0)
     elif a == 0 and c != 0:
         print(1)
